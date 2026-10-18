@@ -16,6 +16,15 @@ formularioJS.addEventListener("submit", function(event){
 
     const usuario = {nombre, apellido, contraseña, confContraseña, correo, telefono, direccion, pais};
     
+    const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuarioExistente = usuariosGuardados.some(u => u.correo === usuario.correo);
+
+    if (usuarioExistente) {
+        alert("El correo ya está registrado. Por favor, utiliza otro correo.");
+        return;
+    }
+
     if(!validarInput(usuario)){
         return;
     }
@@ -36,9 +45,14 @@ formularioJS.addEventListener("submit", function(event){
 
     console.log("Nombre tiene: " + nombre.length + " caracteres");
 
-    localStorage.setItem("usuarioLocalStorage", JSON.stringify(usuario));
+    usuariosGuardados.push(usuario);
+    
+    localStorage.setItem("usuarios", JSON.stringify(usuariosGuardados));
+    
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
 
     window.location = "dashboard.html";
+
     
 });
 

@@ -1,8 +1,3 @@
-const usuarioBDD = {
-        correo: "Guidoberto@gmail.com",
-        password: "Guidoberto1."
-    };
-
 const loginUsuario = document.getElementById("Login");
 
 loginUsuario.addEventListener("submit", function(event){
@@ -25,8 +20,20 @@ loginUsuario.addEventListener("submit", function(event){
 
 function validarUsuario(usuario){
 
-    if(usuario.correo === usuarioBDD.correo && usuario.contraseña === usuarioBDD.password){
+    const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    if(usuariosGuardados.length === 0){
+        alert("No hay usuarios registrados");
+        return false;
+    }
+
+    const encontrado = usuariosGuardados.find(
+        u => u.correo === usuario.correo && u.contraseña === usuario.contraseña
+    );
+
+    if(encontrado){
         alert("Usuario Logeado");
+        localStorage.setItem("usuarioActivo", JSON.stringify(encontrado));
         return true;
         
     } else{
