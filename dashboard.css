@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(93, 159, 43, 0.848);    
+}
+/* Barra lateral */
+.barra-lateral {
+    width: 240px;
+    height: 100vh;
+    background-color: #3e8be9ce;
+    color: white;
+    position: fixed;
+    padding: 10px 15px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.menu a:hover{
+    background-color: #868b5c;
+}
+
+/* Contenedor principal */
+.contenedor{
+    margin-left: 280px;
+    padding: 20px;
+}
+
+.contenedorkpi{
+    display: flex;
+    gap: 16px;
+}
+
+.card{
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.numero{
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.Informacion{
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 4px;
+}
