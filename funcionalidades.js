@@ -56,6 +56,12 @@ formularioJS.addEventListener("submit", function(event){
     
 });
 
+const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+
+btnCerrarSesion.addEventListener("click", function(event){
+    localStorage.removeItem("usuarioActivo");
+
+});
 function validarInput(usuario) {
    if (usuario.nombre === "" || usuario.apellido === "" || usuario.correo === "" || usuario.telefono === "" || usuario.direccion === "" || usuario.pais === "") {
         alert("Los campos no pueden estar vacíos");
