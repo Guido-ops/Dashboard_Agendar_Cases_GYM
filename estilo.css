@@ -6,7 +6,7 @@
     width: 100%;
     height: 80px;
     background-color: wheat;
-    color: white;
+    color: rgb(31, 31, 153);
     box-shadow:  0 5px 10px rgba(0, 0, 0, 0.563);
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@ button{
     width: 95%;
     padding: 10px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 16px;
     border-radius: 10px;
 }
 
@@ -116,6 +116,89 @@ button{
     width: 95%;
     padding: 10px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 16px;
     border-radius: 10px;
+}
+
+/* Foto de portada que ira de fondo en el inciio de sesion */
+
+body {
+    margin: 0;
+}
+
+.portada {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #141414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.portada-imagen img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.portada-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 40px 50px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 16px;
+}
+
+.portada-titulo {
+    font-size: 56px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.portada-texto {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.portada-botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-portada {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #c62828;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #c62828;
+    border-radius: 8px;
+    transition: background-color 300ms, transform 300ms;
+}
+
+.btn-portada:hover {
+    background-color: #8e1c1c;
+    border-color: #8e1c1c;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-secundario:hover {
+    background-color: white;
+    border-color: white;
+    color: #1a1a1a;
 }
