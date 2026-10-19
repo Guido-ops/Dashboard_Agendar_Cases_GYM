@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Cuenta - GYM los Cauros</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         </div>
 
         <div class = "menu">
-            <a href="">Inicio</a>
+            <a href="#">Inicio</a>
             <a href="login.html">Iniciar Sesion</a>
         </div>     
     </nav>
@@ -22,40 +22,40 @@
 
 
     <div class = "FormularioContenedor">
-        <form class="formulariostyle" id="Formularios">
-                <h1 class ="titulo">Registro de Usuario</h1>
+        <form class="formulariostyle" id="CrearCuenta">
+                <h1 class ="titulo">Crear Usuario</h1>
                 <hr style =" margin-bottom: 10px;">
             
             <div class="fila">
                 <div class="campo">
-                    <label> Nombre </label>
+                    <label for="nombreI"> Nombre </label>
                     <input type="text" id="nombreI" placeholder="Antonio">
                 </div>
 
                 <div class="campo">
-                    <label> Apellido </label>
+                    <label for="apellidoI"> Apellido </label>
                     <input type="text" id="apellidoI" placeholder="Santibáñez">
                 </div>
 
                 <div class = "campo">
-                    <label> Contraseña </label>
+                    <label for="Password"> Contraseña </label>
                     <input type="password" id="Password" placeholder="********">
                 </div>
                 
                 <div class = "campo" > 
-                    <label> Confirmar Contraseña </label>
+                    <label for="ConfPassword"> Confirmar Contraseña </label>
                     <input type="password" id="ConfPassword" placeholder="********">
                 </div>        
             </div>
 
             <div class="fila">
                 <div class="campo">
-                    <label>Correo</label>
+                    <label for="correoI">Correo</label>
                     <input type="text" id="correoI" placeholder="antonio@exemple.cl">
                 </div>
 
                 <div class="campo">
-                    <label>Pais</label>
+                    <label for="paisSelect">Pais</label>
                     <select id="paisSelect">
                         <option Value="">Seleccione un pais</option>
                         <option value="CL">Chile</option>
@@ -68,13 +68,13 @@
                 </div>
 
                 <div class="campo">
-                    <label>Telefono</label>
+                    <label for="telefonoI">Telefono</label>
                     <input type="text" id="telefonoI" placeholder="9 12345678">
                 
                 </div>
 
                 <div class="campo">
-                    <label>Direccion</label>
+                    <label for="direccionI">Direccion</label>
                     <input type="text" id="direccionI" placeholder="Calle 123"  >
                 </div>
 
