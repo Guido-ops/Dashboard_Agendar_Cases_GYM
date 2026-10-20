@@ -263,3 +263,9 @@ body {
     border-color: white;
     color: #1a1a1a;
 }
+
+/* Tuve que agregar esto para que no se recorte la cabezaa del saitama jaja, solo loes pies es mejor */
+
+.portada-imagen:first-child img {
+    object-position: center top;
+}
