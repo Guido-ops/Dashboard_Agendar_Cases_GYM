@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Clase - GYM los Cauros</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Barra lateral -->
+    <div class="barra-lateral" >
+        <h2>Agendar Clase</h2>
+        <div class="menu">
+            <a href="dashboard.html">Inicio</a>
+            <a href="agendar.html">Agendar</a>
+            <a href="clientes.html">Clientes</a>
+        </div>
+        <a href="index.html" class="btnCerrarSesion" id="btnCerrarSesion">Cerrar Sesión</a>
+    </div>
+
+    <!-- Contenido de la pagina-->
+     <main class="contenedor">
+        <h1>Agendar Clase</h1>
+        <p>Reserva tu clase preferida en GYM Los Cauros</p>
+        
+        <form id="FormAgendar" class="formAgendar">
+            <div class ="campo">
+                <label for="servicioSelect">Servicio</label>
+                <select id="servicioSelect">
+                    <option value="">Seleccione un servicio</option>
+                    <option value="boxeo">Boxeo</option>
+                    <option value="jujitsu">Jujitsu</option>
+                    <option value="karate">Karate</option>
+                    <option value="crossfit">Crossfit</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="musculacion">Musculación</option>
+                    <option value="spinning">Spinning</option>
+                </select>
+            </div>
+            <div class ="campo">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+            </div>
+            <div class ="campo">
+                <label for="hora">Hora</label>
+                <input type="time" id="hora">
+            </div>
+            <div class="botones">
+                <button class="guardarBtn" type="submit">Agendar</button>
+                <button class="cancelarBtn" type="button" id="btnCancelar">Cancelar</button>
+            </div>
+        </form>
+
+        <h2>Clases Agendadas</h2>
+        <table class="tabla-clases" id="tablaClases">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
