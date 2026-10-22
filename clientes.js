@@ -2,7 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const tabla = document.querySelector("#tablaClientes tbody");
 
-    const clientes = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let clientes = [];
+    const datosGuardados = localStorage.getItem("usuarios");
+
+    if (datosGuardados != null) {
+        clientes = JSON.parse(datosGuardados);
+    }
 
     clientes.forEach(function(cliente) {
 
@@ -16,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         ];
 
         datos.forEach(function(dato) {
+
             const celda = document.createElement("td");
             celda.textContent = dato || "";
+
             fila.appendChild(celda);
         });
-
         tabla.appendChild(fila);
     });
-
 });
