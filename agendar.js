@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const tabla = document.querySelector("#tablaClases tbody");
     const btnCancelar = document.getElementById("btnCancelar");
 
-    let clases = JSON.parse(localStorage.getItem("clasesAgendadas")) || [];
+    let clases = [];
+
+    const datosGuardados = localStorage.getItem("clasesAgendadas");
+
+    if (datosGuardados != null) {
+        clases = JSON.parse(datosGuardados);
+    }
 
     function mostrarClases() {
 
