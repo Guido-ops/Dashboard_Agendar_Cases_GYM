@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Trainer - GYM Los Cauros</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="personalTrainer.css">
+</head>
+<body>
+
+    <div class="barra-lateral">
+        <h2>GYM Los Cauros</h2>
+
+        <div class="menu">
+            <a href="dashboard.html">Inicio</a>
+            <a href="agendar.html">Agendar</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="personalTrainer.html">Personal Trainer</a>
+        </div>
+
+        <a href="index.html" class="btnCerrarSesion">
+            Cerrar Sesión
+        </a>
+    </div>
+
+    <main class="contenedor">
+
+        <h1>Agendamiento Personal Trainer</h1>
+        <p>Reserva sesiones personalizadas para los clientes.</p>
+
+        <form id="formTrainer">
+
+            <label for="clienteTrainer">Cliente</label>
+            <select id="clienteTrainer" required>
+                <option value="">Seleccione un cliente</option>
+            </select>
+
+            <label for="entrenador">Personal Trainer</label>
+            <select id="entrenador" required>
+                <option value="">Seleccione un entrenador</option>
+                <option value="Carlos Muñoz">Carlos Muñoz</option>
+                <option value="Ana Pérez">Ana Pérez</option>
+                <option value="Pedro Soto">Pedro Soto</option>
+            </select>
+
+            <label for="fechaTrainer">Fecha</label>
+            <input type="date" id="fechaTrainer" required>
+
+            <label for="horaTrainer">Hora</label>
+            <input type="time" id="horaTrainer" required>
+
+            <button type="submit">Agendar sesión</button>
+        </form>
+
+        <h2>Sesiones programadas</h2>
+
+        <div class="tabla-contenedor">
+            <table id="tablaTrainer">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Entrenador</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="personalTrainer.js"></script>
+</body>
+</html>
